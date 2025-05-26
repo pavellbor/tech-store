@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Интернет-магазин электроники</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="index.html">TechStore</a>
+                    </div>
+                    
+                    <div class="header__search">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="Поиск товаров...">
+                            <button class="search__button">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="header__actions">
+                        <a href="cart.html" class="button button--secondary">
+                            🛒 Корзина (0)
+                        </a>
+                        <a href="login.html" class="button button--primary">
+                            👤 Войти
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=phones" class="nav__link">Телефоны</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=laptops" class="nav__link">Ноутбуки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=accessories" class="nav__link">Аксессуары</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="page__content">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 2rem; border-radius: 0.5rem; text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+                        Добро пожаловать в TechStore
+                    </h1>
+                    <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+                        Лучшие цены на электронику и гаджеты
+                    </p>
+                    <a href="catalog.html" class="button button--large" style="background: white; color: #667eea;">
+                        Смотреть каталог
+                    </a>
+                </section>
+
+                <!-- Categories -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                        Популярные категории
+                    </h2>
+                    <div class="grid grid--3">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200/3B82F6/FFFFFF?text=Телефоны" alt="Телефоны" class="card__image">
+                            <div class="card__content">
+                                <h3 class="card__title">Смартфоны</h3>
+                                <p class="card__text">Последние модели iPhone, Samsung, Xiaomi</p>
+                                <div class="card__footer">
+                                    <a href="catalog.html?category=phones" class="button button--primary">Смотреть</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200/10B981/FFFFFF?text=Ноутбуки" alt="Ноутбуки" class="card__image">
+                            <div class="card__content">
+                                <h3 class="card__title">Ноутбуки</h3>
+                                <p class="card__text">MacBook, Dell, HP, Lenovo для работы и игр</p>
+                                <div class="card__footer">
+                                    <a href="catalog.html?category=laptops" class="button button--primary">Смотреть</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Аксессуары" alt="Аксессуары" class="card__image">
+                            <div class="card__content">
+                                <h3 class="card__title">Аксессуары</h3>
+                                <p class="card__text">Наушники, чехлы, зарядки и многое другое</p>
+                                <div class="card__footer">
+                                    <a href="catalog.html?category=accessories" class="button button--primary">Смотреть</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular Products -->
+                <section>
+                    <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                        Популярные товары
+                    </h2>
+                    <div class="grid grid--4">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=iPhone+14" alt="iPhone 14 Pro" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=1">iPhone 14 Pro 128GB</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">84 990 ₽</span>
+                                    <span class="product-card__price-old">99 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=MacBook+Air" alt="MacBook Air" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=2">MacBook Air M2 256GB</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">119 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=Samsung+S23" alt="Samsung Galaxy S23" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=3">Samsung Galaxy S23 256GB</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">79 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=AirPods+Pro" alt="AirPods Pro" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=4">Apple AirPods Pro 2</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">19 990 ₽</span>
+                                    <span class="product-card__price-old">24 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="catalog.html" class="button button--secondary button--large">
+                            Смотреть все товары
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h3 class="footer__title">TechStore</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">О компании</a></li>
+                            <li><a href="#" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Покупателям</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Доставка</a></li>
+                            <li><a href="#" class="footer__link">Оплата</a></li>
+                            <li><a href="#" class="footer__link">Возврат</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__list">
+                            <li class="footer__link">📞 8 (800) 123-45-67</li>
+                            <li class="footer__link">📧 info@techstore.ru</li>
+                            <li class="footer__link">📍 Москва, ул. Примерная, 123</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p>&copy; 2024 TechStore. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

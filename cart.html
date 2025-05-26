@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - TechStore</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="index.html">TechStore</a>
+                    </div>
+                    
+                    <div class="header__search">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="Поиск товаров...">
+                            <button class="search__button">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="header__actions">
+                        <a href="cart.html" class="button button--secondary">
+                            🛒 Корзина (3)
+                        </a>
+                        <a href="login.html" class="button button--primary">
+                            👤 Войти
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=phones" class="nav__link">Телефоны</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=laptops" class="nav__link">Ноутбуки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=accessories" class="nav__link">Аксессуары</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="page__content">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumbs">
+                    <span class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    </span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__item">Корзина</span>
+                </nav>
+
+                <!-- Page Title -->
+                <h1 style="font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem;">
+                    Корзина
+                </h1>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <span style="color: var(--color-text-light);">3 товара в корзине</span>
+                            <button class="button button--secondary button--small">
+                                🗑️ Очистить корзину
+                            </button>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Cart Item 1 -->
+                            <div class="cart-item">
+                                <img src="https://via.placeholder.com/80x80/1F2937/FFFFFF?text=iPhone+14" 
+                                     alt="iPhone 14 Pro" 
+                                     class="cart-item__image">
+                                
+                                <div class="cart-item__content">
+                                    <h3 class="cart-item__title">
+                                        <a href="product.html?id=1">Apple iPhone 14 Pro 128GB</a>
+                                    </h3>
+                                    <div class="cart-item__price">84 990 ₽</div>
+                                    
+                                    <div class="cart-item__controls">
+                                        <div class="cart-item__quantity">
+                                            <button class="cart-item__quantity-btn">−</button>
+                                            <input type="number" value="1" min="1" class="cart-item__quantity-input">
+                                            <button class="cart-item__quantity-btn">+</button>
+                                        </div>
+                                        
+                                        <button class="cart-item__remove">
+                                            🗑️ Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cart Item 2 -->
+                            <div class="cart-item">
+                                <img src="https://via.placeholder.com/80x80/1F2937/FFFFFF?text=MacBook+Air" 
+                                     alt="MacBook Air" 
+                                     class="cart-item__image">
+                                
+                                <div class="cart-item__content">
+                                    <h3 class="cart-item__title">
+                                        <a href="product.html?id=2">MacBook Air M2 256GB</a>
+                                    </h3>
+                                    <div class="cart-item__price">119 990 ₽</div>
+                                    
+                                    <div class="cart-item__controls">
+                                        <div class="cart-item__quantity">
+                                            <button class="cart-item__quantity-btn">−</button>
+                                            <input type="number" value="1" min="1" class="cart-item__quantity-input">
+                                            <button class="cart-item__quantity-btn">+</button>
+                                        </div>
+                                        
+                                        <button class="cart-item__remove">
+                                            🗑️ Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cart Item 3 -->
+                            <div class="cart-item">
+                                <img src="https://via.placeholder.com/80x80/1F2937/FFFFFF?text=AirPods+Pro" 
+                                     alt="AirPods Pro" 
+                                     class="cart-item__image">
+                                
+                                <div class="cart-item__content">
+                                    <h3 class="cart-item__title">
+                                        <a href="product.html?id=3">Apple AirPods Pro 2</a>
+                                    </h3>
+                                    <div class="cart-item__price">24 990 ₽</div>
+                                    
+                                    <div class="cart-item__controls">
+                                        <div class="cart-item__quantity">
+                                            <button class="cart-item__quantity-btn">−</button>
+                                            <input type="number" value="2" min="1" class="cart-item__quantity-input">
+                                            <button class="cart-item__quantity-btn">+</button>
+                                        </div>
+                                        
+                                        <button class="cart-item__remove">
+                                            🗑️ Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continue Shopping -->
+                        <div style="margin-top: 2rem; text-align: center;">
+                            <a href="catalog.html" class="button button--secondary">
+                                ← Продолжить покупки
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="cart-summary">
+                        <h2 class="cart-summary__title">Итого</h2>
+                        
+                        <div class="cart-summary__row">
+                            <span>Товары (4 шт.)</span>
+                            <span>254 970 ₽</span>
+                        </div>
+                        
+                        <div class="cart-summary__row">
+                            <span>Доставка</span>
+                            <span style="color: var(--color-success);">Бесплатно</span>
+                        </div>
+                        
+                        <div class="cart-summary__row cart-summary__row--total">
+                            <span>К оплате</span>
+                            <span>254 970 ₽</span>
+                        </div>
+                        
+                        <button class="button button--primary button--large" style="width: 100%; margin-top: 1.5rem;">
+                            Оформить заказ
+                        </button>
+
+                        <!-- Delivery Info -->
+                        <div style="margin-top: 2rem;">
+                            <h3 style="font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Доставка</h3>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--color-text-light);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>🚚</span>
+                                    <span>Курьером: завтра, бесплатно</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>📦</span>
+                                    <span>Самовывоз: сегодня, бесплатно</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h3 class="footer__title">TechStore</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">О компании</a></li>
+                            <li><a href="#" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Покупателям</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Доставка</a></li>
+                            <li><a href="#" class="footer__link">Оплата</a></li>
+                            <li><a href="#" class="footer__link">Возврат</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__list">
+                            <li class="footer__link">📞 8 (800) 123-45-67</li>
+                            <li class="footer__link">📧 info@techstore.ru</li>
+                            <li class="footer__link">📍 Москва, ул. Примерная, 123</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p>&copy; 2024 TechStore. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Empty Cart State (hidden by default) -->
+    <div class="empty-state" style="display: none;">
+        <div class="empty-state__icon">🛒</div>
+        <h2 class="empty-state__title">Корзина пуста</h2>
+        <p class="empty-state__text">
+            Добавьте товары в корзину, чтобы оформить заказ
+        </p>
+        <a href="catalog.html" class="button button--primary button--large">
+            Перейти к покупкам
+        </a>
+    </div>
+
+    <!-- Responsive Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .container > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .cart-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            
+            .cart-item__controls {
+                justify-content: center !important;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</body>
+</html> 

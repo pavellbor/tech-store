@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 Pro 128GB - TechStore</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="index.html">TechStore</a>
+                    </div>
+                    
+                    <div class="header__search">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="Поиск товаров...">
+                            <button class="search__button">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="header__actions">
+                        <a href="cart.html" class="button button--secondary">
+                            🛒 Корзина (0)
+                        </a>
+                        <a href="login.html" class="button button--primary">
+                            👤 Войти
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=phones" class="nav__link nav__link--active">Телефоны</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=laptops" class="nav__link">Ноутбуки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=accessories" class="nav__link">Аксессуары</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="page__content">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumbs">
+                    <span class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    </span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__item">
+                        <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
+                    </span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__item">
+                        <a href="catalog.html?category=phones" class="breadcrumbs__link">Телефоны</a>
+                    </span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__item">iPhone 14 Pro</span>
+                </nav>
+
+                <!-- Product Details -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                    <!-- Product Gallery -->
+                    <div class="product-gallery">
+                        <div class="product-gallery__main" style="margin-bottom: 1rem;">
+                            <img src="https://via.placeholder.com/500x400/1F2937/FFFFFF?text=iPhone+14+Pro" 
+                                 alt="iPhone 14 Pro" 
+                                 style="width: 100%; height: 400px; object-fit: cover; border-radius: 0.5rem; border: 1px solid var(--color-border);">
+                        </div>
+                        <div class="product-gallery__thumbnails" style="display: flex; gap: 0.5rem;">
+                            <img src="https://via.placeholder.com/80x80/1F2937/FFFFFF?text=1" 
+                                 alt="iPhone 14 Pro вид 1" 
+                                 style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.25rem; border: 2px solid var(--color-primary); cursor: pointer;">
+                            <img src="https://via.placeholder.com/80x80/374151/FFFFFF?text=2" 
+                                 alt="iPhone 14 Pro вид 2" 
+                                 style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.25rem; border: 1px solid var(--color-border); cursor: pointer;">
+                            <img src="https://via.placeholder.com/80x80/6B7280/FFFFFF?text=3" 
+                                 alt="iPhone 14 Pro вид 3" 
+                                 style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.25rem; border: 1px solid var(--color-border); cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="background: var(--color-success); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                                В наличии
+                            </span>
+                        </div>
+
+                        <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-text);">
+                            Apple iPhone 14 Pro 128GB
+                        </h1>
+
+                        <div style="margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <span style="font-size: 2rem; font-weight: 700; color: var(--color-primary);">84 990 ₽</span>
+                                <span style="font-size: 1.25rem; color: var(--color-text-light); text-decoration: line-through;">99 990 ₽</span>
+                            </div>
+                            <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                                Экономия: 15 000 ₽
+                            </p>
+                        </div>
+
+                        <!-- Actions -->
+                        <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                            <button class="button button--primary button--large" style="flex: 1;">
+                                🛒 Добавить в корзину
+                            </button>
+                        </div>
+
+                        <!-- Delivery Info -->
+                        <div style="background: var(--color-bg-light); padding: 1.5rem; border-radius: 0.5rem;">
+                            <h3 style="font-weight: 600; margin-bottom: 1rem;">Доставка и оплата</h3>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>🚚</span>
+                                    <span>Бесплатная доставка от 5000 ₽</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>📦</span>
+                                    <span>Самовывоз из магазинов</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>💳</span>
+                                    <span>Оплата картой или наличными</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span>🔄</span>
+                                    <span>Возврат в течение 14 дней</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Description -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+                        Описание товара
+                    </h2>
+                    <div style="line-height: 1.6; color: var(--color-text);">
+                        <p style="margin-bottom: 1rem;">
+                            iPhone 14 Pro — это революционный смартфон с передовыми технологиями. 
+                            Оснащен мощным процессором A16 Bionic, который обеспечивает невероятную производительность 
+                            и энергоэффективность.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Профессиональная камерная система с тремя объективами позволяет создавать 
+                            потрясающие фотографии и видео в любых условиях освещения.
+                        </p>
+                        <ul style="list-style: disc; margin-left: 1.5rem;">
+                            <li>Дисплей Super Retina XDR 6.1 дюйма</li>
+                            <li>Процессор A16 Bionic</li>
+                            <li>Профессиональная камерная система</li>
+                            <li>Защита от воды IP68</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Related Products -->
+                <section>
+                    <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 1.5rem;">
+                        Похожие товары
+                    </h2>
+                    <div class="grid grid--4">
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=iPhone+14" alt="iPhone 14" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=2">iPhone 14 128GB</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">74 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=Samsung+S23" alt="Samsung Galaxy S23" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=3">Samsung Galaxy S23</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">79 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=Xiaomi+13" alt="Xiaomi 13" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=4">Xiaomi 13 Pro</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">69 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__image-container">
+                                <img src="https://via.placeholder.com/250x200/1F2937/FFFFFF?text=iPhone+15" alt="iPhone 15" class="product-card__image">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">
+                                    <a href="product.html?id=5">iPhone 15 128GB</a>
+                                </h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__price-current">89 990 ₽</span>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary product-card__add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h3 class="footer__title">TechStore</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">О компании</a></li>
+                            <li><a href="#" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Покупателям</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Доставка</a></li>
+                            <li><a href="#" class="footer__link">Оплата</a></li>
+                            <li><a href="#" class="footer__link">Возврат</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__list">
+                            <li class="footer__link">📞 8 (800) 123-45-67</li>
+                            <li class="footer__link">📧 info@techstore.ru</li>
+                            <li class="footer__link">📍 Москва, ул. Примерная, 123</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p>&copy; 2024 TechStore. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Responsive Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .container > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в аккаунт - TechStore</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="index.html">TechStore</a>
+                    </div>
+                    
+                    <div class="header__search">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="Поиск товаров...">
+                            <button class="search__button">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="header__actions">
+                        <a href="cart.html" class="button button--secondary">
+                            🛒 Корзина (0)
+                        </a>
+                        <a href="login.html" class="button button--primary">
+                            👤 Войти
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=phones" class="nav__link">Телефоны</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=laptops" class="nav__link">Ноутбуки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html?category=accessories" class="nav__link">Аксессуары</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="page__content">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumbs">
+                    <span class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    </span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__item">Вход в аккаунт</span>
+                </nav>
+
+                <!-- Auth Container -->
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <!-- Tab Navigation -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                        <div style="display: flex; background: var(--color-bg-light); border-radius: 0.5rem; padding: 0.25rem;">
+                            <button id="loginTab" class="auth-tab auth-tab--active" style="padding: 0.75rem 2rem; border: none; background: var(--color-primary); color: white; border-radius: 0.25rem; cursor: pointer; font-weight: 500;">
+                                Вход
+                            </button>
+                            <button id="registerTab" class="auth-tab" style="padding: 0.75rem 2rem; border: none; background: transparent; color: var(--color-text); border-radius: 0.25rem; cursor: pointer; font-weight: 500;">
+                                Регистрация
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div id="loginForm" class="auth-form">
+                        <div class="form">
+                            <h1 style="text-align: center; font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                Добро пожаловать!
+                            </h1>
+                            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+                                Войдите в свой аккаунт
+                            </p>
+
+                            <form>
+                                <div class="form__group">
+                                    <label for="loginEmail" class="form__label">Email</label>
+                                    <input type="email" id="loginEmail" class="form__input" placeholder="example@email.com" required>
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="loginPassword" class="form__label">Пароль</label>
+                                    <input type="password" id="loginPassword" class="form__input" placeholder="Введите пароль" required>
+                                </div>
+
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" style="width: 16px; height: 16px;">
+                                        <span style="font-size: 0.875rem; color: var(--color-text-light);">Запомнить меня</span>
+                                    </label>
+                                    <a href="#" style="font-size: 0.875rem; color: var(--color-primary);">Забыли пароль?</a>
+                                </div>
+
+                                <button type="submit" class="button button--primary form__submit">
+                                    Войти
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div id="registerForm" class="auth-form" style="display: none;">
+                        <div class="form">
+                            <h1 style="text-align: center; font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                Создать аккаунт
+                            </h1>
+                            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+                                Зарегистрируйтесь для удобных покупок
+                            </p>
+
+                            <form>
+                                <div class="form__group">
+                                    <label for="registerName" class="form__label">Имя и фамилия</label>
+                                    <input type="text" id="registerName" class="form__input" placeholder="Иван Петров" required>
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="registerEmail" class="form__label">Email</label>
+                                    <input type="email" id="registerEmail" class="form__input" placeholder="example@email.com" required>
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="registerPhone" class="form__label">Телефон</label>
+                                    <input type="tel" id="registerPhone" class="form__input" placeholder="+7 (999) 123-45-67">
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="registerPassword" class="form__label">Пароль</label>
+                                    <input type="password" id="registerPassword" class="form__input" placeholder="Минимум 8 символов" required>
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="registerPasswordConfirm" class="form__label">Подтвердите пароль</label>
+                                    <input type="password" id="registerPasswordConfirm" class="form__input" placeholder="Повторите пароль" required>
+                                </div>
+
+                                <div style="margin-bottom: 1.5rem;">
+                                    <label style="display: flex; align-items: start; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" style="width: 16px; height: 16px; margin-top: 0.125rem;" required>
+                                        <span style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.4;">
+                                            Я согласен с условиями использования и политикой конфиденциальности
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="button button--primary form__submit">
+                                    Создать аккаунт
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h3 class="footer__title">TechStore</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">О компании</a></li>
+                            <li><a href="#" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Покупателям</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Доставка</a></li>
+                            <li><a href="#" class="footer__link">Оплата</a></li>
+                            <li><a href="#" class="footer__link">Возврат</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__list">
+                            <li class="footer__link">📞 8 (800) 123-45-67</li>
+                            <li class="footer__link">📧 info@techstore.ru</li>
+                            <li class="footer__link">📍 Москва, ул. Примерная, 123</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p>&copy; 2024 TechStore. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginTab = document.getElementById('loginTab');
+            const registerTab = document.getElementById('registerTab');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            function switchToLogin() {
+                loginTab.style.background = 'var(--color-primary)';
+                loginTab.style.color = 'white';
+                registerTab.style.background = 'transparent';
+                registerTab.style.color = 'var(--color-text)';
+                
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            }
+
+            function switchToRegister() {
+                registerTab.style.background = 'var(--color-primary)';
+                registerTab.style.color = 'white';
+                loginTab.style.background = 'transparent';
+                loginTab.style.color = 'var(--color-text)';
+                
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+
+            loginTab.addEventListener('click', switchToLogin);
+            registerTab.addEventListener('click', switchToRegister);
+
+            // Simple form submission
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Форма отправлена! (В реальном приложении здесь будет отправка на сервер)');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
